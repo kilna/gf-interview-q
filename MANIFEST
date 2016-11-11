@@ -1,0 +1,15 @@
+Build.PL
+lib/GFQuestion1.pm
+lib/GFQuestion2/Serializer.pm
+lib/GFQuestion2/Serializer/HTML.pm
+lib/GFQuestion2/Serializer/Javascript.pm
+lib/GFQuestion2/Serializer/Perl.pm
+MANIFEST
+t/q1.t
+t/q2_html.t
+t/q2_javascript.t
+t/q2_perl.t
+t/q2_html_byref.t
+t/structs.pl
+Makefile.PL
+README.md
