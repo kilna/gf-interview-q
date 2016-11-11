@@ -11,7 +11,6 @@ sub hash_key_value_divider { ': ' }
 sub array_header           { '[ ' }
 sub array_footer           { ' ]' }
 sub array_divider          { ', ' }
-sub array_value_divider    { ', ' }
 
 sub encode_scalar {
   my $self = shift;

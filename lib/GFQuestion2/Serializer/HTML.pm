@@ -4,9 +4,6 @@ use base qw(GFQuestion2::Serializer);
 use strict;
 use warnings;
 
-sub default_indent  { '' }
-sub default_newline { '' }
-
 sub hash_header         { '<dl>' }
 sub hash_footer         { '</dl>' }
 sub hash_key_header     { '<dt>' }
