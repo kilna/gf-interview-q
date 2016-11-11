@@ -6,7 +6,7 @@ require Exporter;
 use strict;
 use warnings;
 
-our $VERSION='1.0.0';
+our $VERSION='1.0.1';
 
 sub process_array_of_characters (@) {
   return reverse map {
