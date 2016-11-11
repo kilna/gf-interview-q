@@ -8,11 +8,11 @@ require "$FindBin::Bin/structs.pl";
 
 BEGIN { use_ok('GFQuestion2::Serializer'); }
 
-my $enc = eval { GFQuestion2::Serializer::new('HTML') };
+my $serializer = eval { GFQuestion2::Serializer::new('HTML') };
 is( $@, '', 'Eval during GFQuestion2::Serializer::new()' );
-isa_ok( $enc, 'GFQuestion2::Serializer::HTML' );
+isa_ok( $serializer, 'GFQuestion2::Serializer::HTML' );
 
-my $out = eval { $enc->serialize( hash_struct() ) };
+my $out = eval { $serializer->serialize( hash_struct() ) };
 is( $@, '', "Hash serialize evaluated without error" );
 is(
   $out,
@@ -20,7 +20,7 @@ is(
   'Serialized hash HTML matches expected output'
 );
 
-$out = eval { $enc->serialize( array_struct() ) };
+$out = eval { $serializer->serialize( array_struct() ) };
 is( $@, '', "Array serialize evaluated without error" );
 is(
   $out,
@@ -28,7 +28,7 @@ is(
   'Serialized array HTML matches expected output'
 );
 
-$out = eval { $enc->serialize( 'foo>bar' ) };
+$out = eval { $serializer->serialize( 'foo>bar' ) };
 is( $@, '', "Scalar serialize evaluated without error" );
 is(
   $out,
