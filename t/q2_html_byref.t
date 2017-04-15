@@ -8,6 +8,9 @@ require "$FindBin::Bin/structs.pl";
 
 BEGIN { use_ok('GFQuestion2::Serializer'); }
 
+# This series of tests checks that the GFQuestion2::Serializer::new('HTML') syntax for creating an object works
+# just as well as calling it as GFQuestion2::Serializer::HTML->new(). This way the type of serializaton can be
+# specified using a single instantiator (this is to meet the requirement that there be a single calling syntax).
 my $serializer = eval { GFQuestion2::Serializer::new('HTML') };
 is( $@, '', 'Eval during GFQuestion2::Serializer::new()' );
 isa_ok( $serializer, 'GFQuestion2::Serializer::HTML' );
