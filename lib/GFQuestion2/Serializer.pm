@@ -30,7 +30,6 @@ sub array_divider          { '' }
 sub array_value_header     { '' }
 sub array_value_footer     { '' }
 
-# Default scalar encoder is to just return the string verbatim
 sub encode_scalar {
   croak $pkg.'->encode_scalar must be overridden in a subclass';
 }
